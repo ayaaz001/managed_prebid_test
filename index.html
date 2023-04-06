@@ -1,0 +1,56 @@
+<html>
+<head>
+	<script>
+ function loadScript(tagSrc) {
+ var scriptTag = document.createElement('script'),
+ placeTag = document.getElementsByTagName("script")[0];
+ scriptTag.type = 'text/javascript';
+ scriptTag.async = true;
+ scriptTag.src = tagSrc;
+ placeTag.parentNode.insertBefore(scriptTag, placeTag);
+ }
+ window.mnjs = window.mnjs || {
+ customerId: "8CUC0U5D2",
+ domain: window.location.hostname,
+ failSafeTimeout: 3e3,
+ version: 1.0,
+ isAdServerLoaded: false
+ };
+ var mnjsEndpoint = 'https://warp.media.net/js/tags/clientag.js?' +
+ 'cid=' + window.mnjs.customerId +
+ '&dn=' + window.mnjs.domain +
+ '&version=' + window.mnjs.version;
+ loadScript(mnjsEndpoint);
+ window.mnjs.loadAdServer = setTimeout(function() {
+ if (!window.mnjs.isAdServerLoaded) {
+ loadScript("https://securepubads.g.doubleclick.net/tag/js/gpt.js");
+ window.mnjs.isAdServerLoaded = true;
+ }
+ }, window.mnjs.failSafeTimeout);
+ var googletag = googletag || {};
+ googletag.cmd = googletag.cmd || [];
+</script>
+
+        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/45361917/Managed_Prebid_Adunit_2', [300, 600], 'div-gpt-ad-1680783640371-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
+
+    </head>
+
+    <body>
+        <h2>Basic Prebid.js Example</h2>
+        <h5>Div-1</h5>
+        <!-- /45361917/Managed_Prebid_Adunit_2 -->
+<div id='div-gpt-ad-1680783640371-0' style='min-width: 300px; min-height: 600px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1680783640371-0'); });
+  </script>
+</div>
+    </body>
+</html>
